@@ -1,0 +1,832 @@
+body{
+          margin:0;
+          box-sizing: border-box;
+          overflow-x: hidden;
+}
+html{
+    scroll-behavior: smooth;
+}
+*::selection {
+    background-color: fuchsia;
+    color: white;
+}
+:root{
+          --btnRadius:3px;
+          --btnBack:#2b61f5;
+          --font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.theHeader{
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          position: fixed;
+          background-color: white;
+          z-index: 10000;
+          width: 100%;
+}
+.icon_name .seg{
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          line-height: 5px;
+}
+.icon_name .small {
+          color: rgb(98, 123, 236);
+          font-family: var(--font);
+}
+.headerContainer{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding:5px 10px;
+          box-shadow: 0px 0px 20px rgba(58, 58, 58, 0.1);
+          z-index: 10000;
+}
+.sideMenuBtn{
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+          cursor: pointer;
+          margin-right: 10px;
+          position: relative;
+          transition: height 1s;
+          z-index: 10000;
+}
+.sideMenuBtn:hover .dd_content{
+          display: block;
+          height: 180px;
+          z-index: 10000;
+}
+
+.dd_content{
+          height: 0px;
+          display: none;
+          position: absolute;
+          right: 15px;
+          top: 10px;
+          box-shadow: 2px 2px 30px lightgray;
+          background-color: white;
+          padding: 10px 20px;
+          border-radius: 6px;
+          transition:.5s;
+          width: 200px;
+          z-index: 10000;
+}
+
+.dd_content .bordered{
+          padding: 10px 20px;
+          border-bottom: 1px solid rgb(49, 49, 49);
+}
+.notBordered{
+          padding: 10px 20px;
+}
+.dd_content .ddLink{
+          margin-top: 5px;
+}
+.dd_content .ddLink:hover{
+          background-color: lightgray;
+          color: rgb(98, 111, 228);
+          border-radius: 3px;
+          font-family: var(--font);
+}
+.active{
+    color: #0040f1;
+    font-weight: bolder;
+}
+.dd_content .ddLink a{
+          text-decoration: none;
+          color: black;
+          font-family: var(--font);
+          font-weight: 300;
+}
+.sideMenuBtn span{
+          line-height: 10px;
+}
+
+.shocase_name{
+          margin-top: 6em;
+          
+}
+
+.large_name{
+          padding:10px 0px;
+}
+.large_name .ourName span{
+          display: block;
+          font-family: var(--font);
+          font-size: 27px;
+}
+.large_name .ourName{
+          margin-left: 20px;
+}
+.large_name .ourName .act1{
+      color: rgb(21, 255, 0);    
+}
+.large_name .ourName .act2{
+          color: rgb(255, 0, 179);
+}
+.large_name .ourName .act3{
+          color: rgb(255, 136, 0);
+}
+
+.onGoing_service_box{
+          margin-top: 2em;
+          padding: 10px 20px;
+}
+
+.onGoing_service_box .ongoing_service_container{
+          background-color: rgba(41, 60, 231, 0.1);
+          padding: 15px 6px;
+          border-radius: 3px;
+          font-family: var(--font);
+}
+.ongoing_service_container .ongoing_name{
+          color: rgb(39, 39, 39);
+}
+.ongoing_service_container p a{
+          text-decoration: none;
+          color: rgb(0, 110, 255);
+          text-transform: capitalize;
+}
+.ongoing_service_container .Apply_now_btn{
+          outline: none;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 3px;
+          background-color: var(--btnBack);
+          color: white;
+          font-family: var(--font);
+          cursor: pointer;
+}
+.ongoing_service_container .Apply_now_btn:hover{
+          background: #0040f1;
+}
+
+.apply_for_section{
+          margin-top: 1em;
+          padding: 10px 20px;
+          
+}
+.apply_say {
+          font-family: var(--font);
+          text-transform: capitalize;
+}
+.eacthBox{
+          padding: 15px 10px;
+          margin: 5px;
+          width: 250px;
+          background: rgba(93, 123, 223, 0.1);
+          border-radius: 4px;
+          box-shadow: 1px 1px 5px #cccdcf;
+          display: inline-block;
+          font-family: var(--font);
+
+}
+.eacth_box_for_text{
+          font-family: var(--font);
+}
+
+.eacth_box_for_text p{
+          font-family: var(--font);
+          font-size: 17px;
+}
+
+.theLessonName{
+          font-family: var(--font);
+          text-transform: uppercase;
+}
+.apply_container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rev_img_dec{
+          width: 100%;
+          height: 200px;
+          border-radius: inherit;
+}
+
+.assured{
+    padding: 5px 10px;
+    color: #001aff33;
+    border-radius:4px;
+    background-color: rgba(24, 0, 240, 0.1);
+    font-family: var(--font);
+    text-transform: capitalize;
+    position: relative;
+    right: 20px;
+
+}
+
+.exam_btn{
+          outline: none;
+          border: none;
+          padding:10px 20px;
+          border-radius: 3px;
+          color: white;
+          font-family: var(--font);
+          cursor: pointer;
+          background-color: var(--btnBack);
+          font-size: 18px;
+}
+.exam_btn:hover{
+          background-color: #0447ff;
+}
+
+.wat_we_offer{
+          margin-top: 2em;
+          padding: 10px 20px;
+          font-family: var(--font);
+}
+.offer_Box{
+          padding: 10px 15px;
+          border-radius: 3px;
+          background-color: rgba(0, 67, 212, 0.1);
+          margin-top: 20px;
+          
+}
+.offer_Box p{
+          font-weight: 100;
+          font-size: 17px;
+}
+.offer_Box button{
+          display: block;
+          outline: none;
+          border: none;
+          padding:10px 20px;
+          border-radius: 3px;
+          color: white;
+          font-family: var(--font);
+          cursor: pointer;
+          background-color: var(--btnBack);
+          font-size: 18px;
+}
+
+.offer_Box a{
+          text-align: right;
+          float: right;
+          text-decoration: none;
+}
+.tell_them_something{
+          margin-top: 1em;
+          padding: 10px 20px;
+          font-family: var(--font);
+          color: rgb(0, 38, 255);
+          font-size: 20px;
+          word-spacing: 5px;
+
+          
+}
+main{
+          flex: 1 0 auto;
+}
+.footer_body{
+          color: white;
+          background-color: #333;
+          font-size: 18px;
+          display: flex;
+          font-family: var(--font);
+          width: 100%;
+}
+.brand{
+          padding: 10px 15px;
+          margin-top: 10px;
+}
+.viaTrough{
+          padding: 10px 15px;
+}
+.viaTrough li{
+          list-style: none;
+}
+.other_say{
+          margin-top: 25px;
+}
+.viaTrough li a{
+          text-decoration: none;
+          color: white;
+          font-family: var(--font);
+}
+.footer_copyRight{
+          width: 100%;
+          height: 50px;
+          left: 0;
+          bottom: 0;
+          background: rgb(31, 31, 31);
+          padding: 5px 0px;
+          color: white;
+          font-family: var(--font);
+}
+
+.showWenUserClickAboutUs{
+    position: absolute;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    height: 400px;
+    bottom: -100%;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.3);
+    border-radius: 20px 20px 0px 0px;
+    overflow-x: scroll;
+    font-family: var(--font);
+    z-index: 50;
+    transition: bottom .5s;
+}
+.showWenUserClickAboutUs::-webkit-scrollbar{
+    display: none;
+}
+.showWenUserClickAboutUs h2{
+    margin-left: 20px;
+}
+.showWenUserClickAboutUs .about_us{
+    padding: 20px 20px;
+    font-size: 17px;
+    font-family: var(--font);
+}
+
+.bname{
+    font-family: var(--font);
+    font-size: 16px;
+    margin-left: 20px;
+}
+.about_us p{
+    font-size: 16px;
+    font-family: var(--font);
+    padding: 5px 5px;
+}
+.about_us a{
+    text-decoration: none;
+    display: block;
+    font-family: var(--font);
+    font-weight: 200;
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.closeAbts_icon{
+    position: fixed;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(240, 61, 61);
+    text-align: right;
+    float: right;
+    margin-left: 550px;
+    margin-top: -40px;
+}
+
+.the_show_authentication-box{
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.4s, top 0.4s;
+    font-size: 17px;
+    font-family: var(--font);
+    width: 80%;
+    z-index: 200000;
+    
+}
+
+.the_show_finish-box{
+    position: absolute;
+    top: 20px;
+    border-radius: 10px;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    left: 50%;
+    z-index: 100;
+    width: 80%;
+    top: 20%;
+    transform: translate(-50%, -50%) scale(0);
+    display: none;
+    position: fixed;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-size: 17px;     
+    transition: transform 0.4s, top 0.4s;
+    font-family: var(--font);
+}
+.the_show_finish-box p{
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: var(--font);
+    color: #333;
+}
+.the_show_finish-box button{
+    padding: 10px 20px;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    color: white;
+    background-color: var(--btnBack);
+    cursor: pointer;
+    font-family: var(--font);
+}
+
+.the_show_authentication-box p{
+    font-weight: bolder;
+    font-size: 18px;
+    font-family: var(--font);
+    color: #333;
+}
+.pop_up_box input{
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 3px;
+    background: rgb(218, 216, 216);
+    text-indent: 10px;
+    font-family: var(--font);
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 200;
+
+}
+.btns{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5px;
+
+}
+.btns button{
+    padding: 10px 20px;
+    outline: none;
+    border:none;
+    border-radius: 3px;
+    color: white;
+    background-color: var(--btnBack);
+    cursor: pointer;
+    font-family: var(--font);
+    width: 50%;
+}
+
+.apply_for_Course{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    bottom: 0;
+    transition: bottom .5s;
+    right: 0;
+    left: 0;
+    top: 0;
+    overflow-y: scroll;
+    background-color: white;
+    position: fixed;
+    display: none;
+    box-shadow: 1px 1px 50px #00000033;
+    border-radius: 16px 16px 0px 0px;
+    overflow-x: hidden;
+}
+.apply_for_Course::-webkit-scrollbar{
+    display: none;
+}
+
+.apply_for_Course .navigate{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font);
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    border-radius: inherit;
+    margin-top: 4em;
+}
+.ApplyForExameName{
+    margin-right: 100px;
+    color: rgb(12, 170, 12);
+}
+.backApplyForCourse{
+    color: red;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.theApplyBox{
+    font-family: var(--font);
+    padding: 10px;
+    margin-top: 9em;
+}
+.condition{
+    padding: 10px 20px;
+    background-color: rgba(0, 56, 240, 0.1);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: var(--font);
+    color: green;
+}
+
+.registration_container input{
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 95%;
+    border-radius: 3px;
+    background: rgb(236, 236, 236);
+    text-indent: 10px;
+    font-family: var(--font);
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 200;
+}
+.registration_container label{
+    font-family: var(--font);
+    font-size: 18px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.registration_container .inputBoxSec{
+    margin-top: 30px;
+}
+.forProFileCode label input{
+    width: 95%;
+}
+.Profile_Code{
+    text-align: center;
+}
+/* .hasStick{
+    background-color: white;
+    position: sticky;
+    z-index: 900000;
+} */
+
+.addres{
+    width: 95%;
+    height: 120px;
+    background-color: rgb(233, 231, 231);
+    border: none;
+    resize: none;
+    margin-top: 20px;
+    outline:none;
+    border-radius: 4px;
+    font-size: 19px;
+    font-family: var(--font);
+    text-transform: capitalize;
+    margin-left: 5px;
+}
+
+.agree{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.agree span a{
+    text-decoration: none;
+    font-size: 17px;
+    color: #0040f1;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.agree span input{
+    width: 20px;
+    height: 20px;
+}
+.buttonActionSubmit{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttonActionSubmit a{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--btnBack);
+    margin: 2px;
+}
+.Submitt{
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--btnBack);
+    margin: 2px;
+    border: none;
+}
+.AboutThisExam{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+    text-align: center;
+
+}
+.Infomation{
+    text-decoration: none;
+    font-size: 17px;
+    color: #0040f1;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.secured{
+        width: 100%;
+        background-color: rgba(0, 81, 255, 0.1);
+        font-family: var(--font);
+        color: rgb(22, 5, 255);
+        font-size: 17px;
+        padding-top: 10px;
+        text-align: center;
+        padding-bottom: 10px;
+}
+
+.secured a{
+        text-decoration: none;
+        color: var(--btnBack);
+        font-size: 17px;
+}
+
+
+.make_enquiries_box{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0;
+    height: 100vh;
+    background-color: white;
+    box-shadow: 1px 1px 50px #00000033;
+    font-family: var(--font);
+    width: 100%;
+    height: 100vh;
+    border-radius: 6px;
+    font-size: 17px;
+    position: fixed;
+    z-index: 1;
+    display: none;
+}
+.inputSectionForEnquiries{
+    font-size: 17px;
+    padding: 0px 10px;
+    font-family: var(--font);
+}
+.flexOne{
+    margin-top: 30px;
+    background-color: rgba(0, 60, 255, 0.1);
+    padding: 20px 10px;
+    border-radius: 6px;
+}
+
+.This_Message{
+    padding: 20px 5px;
+    background-color: rgba(255, 0, 170, 0.1);
+    border-radius: 6px;
+}
+.examty{
+    margin-top: 80px;
+    text-align: center;
+}
+
+.flexOne p{
+    font-size: 17px;
+    font-family: var(--font);
+}
+.flexOne p input{
+    border: none;
+    width: 200px;
+    outline: none;
+    font-size: 17px;
+    height: 35px;
+    margin-left: 5px;
+    text-indent: 2px;
+}
+.letMeNo{
+    color: green;
+    padding: 10px 10px;
+}
+.enquiryActionBtn{
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--btnBack);
+    margin: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+}
+
+.cancelled {
+    background-color: crimson;
+    color: white;
+}
+
+.Features{
+    font-family: var(--font);
+    width: 100%;
+}
+.top_tag{
+    margin-left: 20px;
+}
+.featureBox{
+    padding: 10px 10px;
+}
+.featureBox .feature1{
+    padding: 30px 10px;
+    background-color: white;
+    font-family: var(--font);
+    border-radius: 6px;
+    box-shadow: 1px 1px 30px lightgray;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.featureBox .feature1 p{
+    color: gray;
+}
+.featureBox .feature1 img{
+    width: 50px;
+    height: 50px;
+}
+
+.addBackz{
+    background-color: rgba(0, 38, 255, 0.2);
+    border-radius: 4px;
+    padding: 5px 5px;
+    margin-top: 20px;
+}
+
+#exTy, #examTY{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 414px) {
+    .eacthBox{
+        width: 100%;
+        display: block;
+    }
+    .the_show_authentication-box {
+        width: 70%;
+        display: block;
+    }
+    *{
+        font-size:16px;
+    }
+}
+@media screen and (max-width:600px) {
+    .eacthBox{
+        width: 100%;
+        display: block;
+    }
+
+    *{
+        font-size:15px;
+    }
+
+    *::selection{
+        background-color: fuchsia;
+        color: white;
+    }
+
+    button{
+        font-size: 16px;
+        font-family: var(--font);
+    }
+}
+
+@media screen and (max-width: 1114px) {
+    .the_show_authentication-box {
+        width: 60%;
+        display: block;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .make_enquiries_box {
+        overflow-y: scroll;
+    }
+
+    .make_enquiries_box::-webkit-scrollbar{
+            display: none;
+    }
+}
